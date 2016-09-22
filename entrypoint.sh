@@ -15,6 +15,7 @@ DEMO_DOWNLOAD="${DEMO_DOWNLOAD:-true}"
 REMIND_RECORD="${REMIND_RECORD:-false}"
 DAMAGE_REPORT="${DAMAGE_REPORT:-false}"
 DELAY_READY="${DELAY_READY:-false}"
+NODE_STARTUP_METHOD="${NODE_STARTUP_METHOD:-none}"
 
 # for usage with docker-compose
 while ! nc -z $MYSQL_HOST $MYSQL_PORT; do sleep 3; done
