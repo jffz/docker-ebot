@@ -1,5 +1,6 @@
 ebot:
   image: hsfactory/ebot
+  restart: always
   links:
     - "mysql:mysql"
   ports:
