@@ -23,6 +23,7 @@ ebot:
     REMIND_RECORD: 'false'
     DAMAGE_REPORT: 'true'
     DELAY_READY: 'false'
+    NODE_STARTUP_METHOD: 'none'
 
 ebotweb:
   image: hub.hsfactory.net/hsfactory/ebotweb:latest
