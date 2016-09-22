@@ -1,0 +1,64 @@
+ebot:
+  image: hub.hsfactory.net/hsfactory/ebot:latest
+  links:
+    - "mysql:mysql"
+  ports:
+    - "12360:12360"
+    - "12361:12361"
+    - "12360:12360/udp"
+    - "12361:12361/udp"
+  volumes:
+    - /opt/docker/ebot/logs:/ebot/logs
+    - /opt/docker/ebot/demos:/ebot/demos
+  environment:
+    EXTERNAL_IP: '192.168.1.64'
+    MYSQL_HOST: 'mysql'
+    MYSQL_PORT: '3306'
+    MYSQL_DB: 'ebotv3'
+    MYSQL_USER: 'ebotv3'
+    MYSQL_PASS: 'ebotv3'
+    LO3_METHOD: 'restart'
+    KO3_METHOD: 'restart'
+    DEMO_DOWNLOAD: 'true'
+    REMIND_RECORD: 'false'
+    DAMAGE_REPORT: 'true'
+    DELAY_READY: 'false'
+
+ebotweb:
+  image: hub.hsfactory.net/hsfactory/ebotweb:latest
+  links:
+    - "mysql:mysql"
+  ports:
+    - "80:80"
+  volumes:
+    - /opt/docker/ebot/demos:/opt/demos
+    - /opt/docker/ebot/logs:/opt/logs
+  environment:
+    EBOT_IP: '192.168.1.64'
+    EBOT_PORT: '12360'
+    EBOT_ADMIN_USER: 'admin'
+    EBOT_ADMIN_PASS: 'password'
+    MYSQL_HOST: 'mysql'
+    MYSQL_PORT: '3306'
+    MYSQL_DB: 'ebotv3'
+    MYSQL_USER: 'ebotv3'
+    MYSQL_PASS: 'ebotv3'
+    DEMO_DOWNLOAD: 'true'
+    TOORNAMENT_ID: ''
+    TOORNAMENT_SECRET: ''
+    TOORNAMENT_API_KEY: ''
+    TOORNAMENT_PLUGIN_KEY: ''
+
+mysql:
+  image: mysql
+  ports:
+    - "3306:3306"
+  expose:
+    - "3306"
+  volumes:
+    - /var/lib/mysql:/var/lib/mysql
+  environment:
+    - MYSQL_DATABASE=ebotv3
+    - MYSQL_USER=ebotv3
+    - MYSQL_PASSWORD=ebotv3
+    - MYSQL_ROOT_PASSWORD=ebotv3
