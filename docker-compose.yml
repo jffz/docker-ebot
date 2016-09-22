@@ -28,6 +28,7 @@ ebot:
 
 ebotweb:
   image: hsfactory/ebotweb
+  restart: always
   links:
     - "mysql:mysql"
   ports:
@@ -53,6 +54,7 @@ ebotweb:
 
 mysql:
   image: mysql
+  restart: always
   ports:
     - "3306:3306"
   expose:
