@@ -1,7 +1,7 @@
 docker-ebot
 ================
 
-Dockerise eBot (https://github.com/deStrO/eBot-CSGO) for ease of use. 
+Dockerised eBot (https://github.com/deStrO/eBot-CSGO) for ease of use. 
 
 Pre-Requisites
 --------------
