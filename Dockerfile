@@ -1,7 +1,6 @@
 FROM php:5.6.25-zts
 
-ENV EBOT_HOME="/ebot" \
-    TIMEZONE="Europe/Paris"
+ENV EBOT_HOME="/ebot"
 
 RUN apt-get update -y && apt-get install -y netcat git nodejs npm php5-curl && apt-get clean && \
     mkdir ${EBOT_HOME} && \
@@ -10,7 +9,6 @@ RUN apt-get update -y && apt-get install -y netcat git nodejs npm php5-curl && a
     pecl install pthreads-2.0.10 && \
     docker-php-ext-enable pthreads && \
     docker-php-ext-install mysql sockets && \
-    echo 'date.timezone = "${TIMEZONE}"' >> /usr/local/etc/php/conf.d/php.ini && \
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php --install-dir=/usr/bin && \
     php -r "unlink('composer-setup.php');" && \
