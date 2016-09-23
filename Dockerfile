@@ -6,7 +6,8 @@ ENV EBOT_HOME="/ebot" \
 RUN apt-get update -y && apt-get install -y netcat git nodejs npm php5-curl && apt-get clean && \
     mkdir ${EBOT_HOME} && \
     ln -s /usr/bin/nodejs /usr/bin/node && \
-    npm install -g socket.io@0.9.12 archiver formidable forever && \
+    npm install socket.io@0.9.12 archiver formidable && \
+    npm install -g forever && \
     pecl install pthreads-2.0.10 && \
     docker-php-ext-enable pthreads && \
     docker-php-ext-install mysql sockets && \
