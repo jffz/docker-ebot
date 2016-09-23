@@ -17,6 +17,7 @@ services:
       - /opt/docker/ebot/demos:/ebot/demos
     environment:
       EXTERNAL_IP: '192.168.1.91'
+      TIMEZONE: 'Europe/Paris'
       MYSQL_HOST: 'mysql'
       MYSQL_PORT: '3306'
       MYSQL_DB: 'ebotv3'
