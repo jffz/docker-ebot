@@ -45,6 +45,7 @@ services:
       - /opt/docker/ebot/logs:/opt/logs
     environment:
       EBOT_IP: '192.168.1.91'
+      TIMEZONE: 'Europe/Paris'
       EBOT_PORT: '12360'
       EBOT_ADMIN_USER: 'admin'
       EBOT_ADMIN_PASS: 'password'
