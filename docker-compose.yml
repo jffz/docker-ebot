@@ -16,7 +16,6 @@ services:
       - /opt/docker/ebot/logs:/ebot/logs
       - /opt/docker/ebot/demos:/ebot/demos
     environment:
-      TIMEZONE: 'Europe/Paris'
       EXTERNAL_IP: '192.168.1.91'
       MYSQL_HOST: 'mysql'
       MYSQL_PORT: '3306'
@@ -44,7 +43,6 @@ services:
       - /opt/docker/ebot/demos:/opt/demos
       - /opt/docker/ebot/logs:/opt/logs
     environment:
-      TIMEZONE: 'Europe/Paris'
       EBOT_IP: '192.168.1.91'
       EBOT_PORT: '12360'
       EBOT_ADMIN_USER: 'admin'
