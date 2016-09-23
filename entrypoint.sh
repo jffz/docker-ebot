@@ -1,4 +1,5 @@
 #!/bin/bash
+
 CONTAINER_IP=$(hostname -i)
 EXTERNAL_IP="${EXTERNAL_IP:-}"
 MYSQL_HOST="${MYSQL_HOST:-mysql}"
