@@ -36,5 +36,5 @@ sed -i "s/DAMAGE_REPORT =.*/DAMAGE_REPORT = $DAMAGE_REPORT/g" $EBOT_HOME/config/
 sed -i "s/DELAY_READY = .*/DELAY_READY = $DELAY_READY/g" $EBOT_HOME/config/config.ini
 sed -i "s/NODE_STARTUP_METHOD = .*/NODE_STARTUP_METHOD = \"$NODE_STARTUP_METHOD\"/g" $EBOT_HOME/config/config.ini
 
-exec php "$EBOT_HOME/bootstrap.php" && forever start $EBOT_HOME/websocket_server.js $CONTAINER_IP 12360
+exec php "$EBOT_HOME/bootstrap.php" && forever start $EBOT_HOME/websocket_server.js $(hostname -i) 12360
 
