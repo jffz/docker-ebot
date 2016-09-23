@@ -3,6 +3,8 @@ ebot:
   restart: always
   links:
     - "mysql:mysql"
+  depends_on:
+    - mysql
   ports:
     - "12360:12360"
     - "12361:12361"
@@ -31,6 +33,8 @@ ebotweb:
   restart: always
   links:
     - "mysql:mysql"
+  depends_on:
+    - mysql
   ports:
     - "80:80"
   volumes:
