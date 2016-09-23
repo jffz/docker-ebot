@@ -49,6 +49,7 @@ services:
       EBOT_PORT: '12360'
       EBOT_ADMIN_USER: 'admin'
       EBOT_ADMIN_PASS: 'password'
+      EBOT_ADMIN_MAIL: ''
       MYSQL_HOST: 'mysql'
       MYSQL_PORT: '3306'
       MYSQL_DB: 'ebotv3'
