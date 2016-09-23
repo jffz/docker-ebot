@@ -1,5 +1,4 @@
 #!/bin/bash
-# taken from https://github.com/carazzim0/docker-ebot/blob/master/entrypoint.sh
 
 CONTAINER_IP=$(hostname -i)
 EXTERNAL_IP="${EXTERNAL_IP:-}"
@@ -18,7 +17,7 @@ DELAY_READY="${DELAY_READY:-false}"
 NODE_STARTUP_METHOD="${NODE_STARTUP_METHOD:-none}"
 
 # for usage with docker-compose
-while ! nc -z $MYSQL_HOST $MYSQL_PORT; do sleep 3; done
+#while ! nc -z $MYSQL_HOST $MYSQL_PORT; do sleep 3; done
 
 sed -i "s/BOT_IP =.*/BOT_IP = \"$CONTAINER_IP\"/g" $EBOT_HOME/config/config.ini
 sed -i "s/EXTERNAL_LOG_IP = .*/EXTERNAL_LOG_IP = \"$EXTERNAL_IP\"/g" $EBOT_HOME/config/config.ini
@@ -35,6 +34,5 @@ sed -i "s/DAMAGE_REPORT =.*/DAMAGE_REPORT = $DAMAGE_REPORT/g" $EBOT_HOME/config/
 sed -i "s/DELAY_READY = .*/DELAY_READY = $DELAY_READY/g" $EBOT_HOME/config/config.ini
 sed -i "s/NODE_STARTUP_METHOD = .*/NODE_STARTUP_METHOD = \"$NODE_STARTUP_METHOD\"/g" $EBOT_HOME/config/config.ini
 
-#exec php "$EBOT_HOME/bootstrap.php"
 exec php "$EBOT_HOME/bootstrap.php" && forever start $EBOT_HOME/websocket_server.js $EXTERNAL_IP 12360
 
