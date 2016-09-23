@@ -17,7 +17,7 @@ DELAY_READY="${DELAY_READY:-false}"
 NODE_STARTUP_METHOD="${NODE_STARTUP_METHOD:-none}"
 
 # for usage with docker-compose
-#while ! nc -z $MYSQL_HOST $MYSQL_PORT; do sleep 3; done
+while ! nc -z $MYSQL_HOST $MYSQL_PORT; do sleep 3; done
 
 sed -i "s/BOT_IP =.*/BOT_IP = \"$CONTAINER_IP\"/g" $EBOT_HOME/config/config.ini
 sed -i "s/EXTERNAL_LOG_IP = .*/EXTERNAL_LOG_IP = \"$EXTERNAL_IP\"/g" $EBOT_HOME/config/config.ini
