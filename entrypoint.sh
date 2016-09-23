@@ -1,4 +1,5 @@
 #!/bin/bash
+TIMEZONE="${TIMEZONE:-Europe/Paris}"
 
 CONTAINER_IP=$(hostname -i)
 EXTERNAL_IP="${EXTERNAL_IP:-}"
@@ -18,6 +19,8 @@ NODE_STARTUP_METHOD="${NODE_STARTUP_METHOD:-none}"
 
 # for usage with docker-compose
 while ! nc -z $MYSQL_HOST $MYSQL_PORT; do sleep 3; done
+
+echo 'date.timezone = "${TIMEZONE}"' >> /usr/local/etc/php/conf.d/php.ini
 
 sed -i "s/BOT_IP =.*/BOT_IP = \"$CONTAINER_IP\"/g" $EBOT_HOME/config/config.ini
 sed -i "s/EXTERNAL_LOG_IP = .*/EXTERNAL_LOG_IP = \"$EXTERNAL_IP\"/g" $EBOT_HOME/config/config.ini
