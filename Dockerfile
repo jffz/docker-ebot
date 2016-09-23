@@ -10,7 +10,6 @@ RUN apt-get update -y && apt-get install -y netcat git nodejs npm php5-curl && a
     pecl install pthreads-2.0.10 && \
     docker-php-ext-enable pthreads && \
     docker-php-ext-install mysql sockets && \
-    echo 'date.timezone = "${TIMEZONE}"' >> /etc/php5/apache2/php.ini && \
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
     php composer-setup.php --install-dir=/usr/bin && \
     php -r "unlink('composer-setup.php');" && \
