@@ -34,8 +34,8 @@ ebotweb:
   ports:
     - "80:80"
   volumes:
-    - /opt/docker/ebot/demos:/opt/demos
-    - /opt/docker/ebot/logs:/opt/logs
+    - /opt/docker/ebot/demos:/opt/ebot/demos
+    - /opt/docker/ebot/logs:/opt/ebot/logs
   environment:
     EBOT_IP: 'xxx.xxx.xxx.xxx'
     EBOT_PORT: '12360'
