@@ -39,8 +39,8 @@ sed -i "s/DELAY_READY = .*/DELAY_READY = $DELAY_READY/g" $EBOT_HOME/config/confi
 sed -i "s/NODE_STARTUP_METHOD = .*/NODE_STARTUP_METHOD = \"$NODE_STARTUP_METHOD\"/g" $EBOT_HOME/config/config.ini
 
 echo '[\eBot\Plugins\Official\ToornamentNotifier]' >> $EBOT_HOME/config/plugins.ini
-echo 'url=http://${EXTERNAL_IP}/matchs/toornament/export/{MATCH_ID}' >> $EBOT_HOME/config/plugins.ini
-echo 'key=${TOORNAMENT_PLUGIN_KEY}' >> $EBOT_HOME/config/plugins.ini
+echo 'url=http://"${EXTERNAL_IP}"/matchs/toornament/export/{MATCH_ID}' >> $EBOT_HOME/config/plugins.ini
+echo 'key="${TOORNAMENT_PLUGIN_KEY}"' >> $EBOT_HOME/config/plugins.ini
 
 exec php "$EBOT_HOME/bootstrap.php" 
 
