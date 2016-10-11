@@ -25,6 +25,7 @@ ebot:
     DAMAGE_REPORT: 'true'
     DELAY_READY: 'false'
     NODE_STARTUP_METHOD: 'forever start'
+    TOORNAMENT_PLUGIN_KEY: ''
 
 ebotweb:
   image: hsfactory/ebotweb
