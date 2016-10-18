@@ -24,7 +24,7 @@ ebot:
     REMIND_RECORD: 'false'
     DAMAGE_REPORT: 'true'
     DELAY_READY: 'false'
-    NODE_STARTUP_METHOD: 'forever start'
+    NODE_STARTUP_METHOD: 'node'
     TOORNAMENT_PLUGIN_KEY: ''
 
 ebotweb:
