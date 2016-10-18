@@ -60,14 +60,15 @@ Run
 
 Quick start
 -----------
-* Connect to the running eBot web interface @ `http://$hostip/ebot`
+* Connect to the running eBot web interface @ `http://$hostip/`
 
-* To admin goto `http://$hostip/ebot/admin.php` - u:admin p:password
+* To admin goto `http://$hostip/admin.php` - u:admin p:password
 
 
 Credits
 -------
+* jeff
 * carazzim0
 * destr0
-* jeff
+
 
