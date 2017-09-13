@@ -68,4 +68,5 @@ mysql:
     - MYSQL_USER=ebotv3
     - MYSQL_PASSWORD=ebotv3
     - MYSQL_ROOT_PASSWORD=MyAwesomePassword
+    - MYSQL_ROOT_HOST=%
   command: mysqld --sql_mode="NO_ENGINE_SUBSTITUTION"
