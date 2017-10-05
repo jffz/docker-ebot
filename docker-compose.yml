@@ -49,6 +49,7 @@ ebotweb:
     MYSQL_USER: 'ebotv3'
     MYSQL_PASS: 'ebotv3'
     DEMO_DOWNLOAD: 'true'
+    DEFAULT_RULES: 'esl5on5'
     TOORNAMENT_ID: ''
     TOORNAMENT_SECRET: ''
     TOORNAMENT_API_KEY: ''
