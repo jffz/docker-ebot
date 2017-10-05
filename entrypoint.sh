@@ -38,7 +38,7 @@ sed -i "s/REMIND_RECORD =.*/REMIND_RECORD = $REMIND_RECORD/g" $EBOT_HOME/config/
 sed -i "s/DAMAGE_REPORT =.*/DAMAGE_REPORT = $DAMAGE_REPORT/g" $EBOT_HOME/config/config.ini
 sed -i "s/DAMAGE_REPORT =.*/DAMAGE_REPORT = $DAMAGE_REPORT/g" $EBOT_HOME/config/config.ini
 sed -i "s/DELAY_READY = .*/DELAY_READY = $DELAY_READY/g" $EBOT_HOME/config/config.ini
-sed -i "s/USE_DELAY_END_RECORD = .*/USE_DELAY_END_RECORD = \"$NODE_STARTUP_METHOD\"/g" $EBOT_HOME/config/config.ini
+sed -i "s/USE_DELAY_END_RECORD = .*/USE_DELAY_END_RECORD = \"$USE_DELAY_END_RECORD\"/g" $EBOT_HOME/config/config.ini
 
 echo -e "\n" >> $EBOT_HOME/config/plugins.ini
 echo '[\eBot\Plugins\Official\ToornamentNotifier]' >> $EBOT_HOME/config/plugins.ini
