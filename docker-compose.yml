@@ -25,6 +25,7 @@ ebot:
     DAMAGE_REPORT: 'true'
     DELAY_READY: 'false'
     NODE_STARTUP_METHOD: 'node'
+    USE_DELAY_END_RECORD: 'true'
     TOORNAMENT_PLUGIN_KEY: ''
 
 ebotweb:
