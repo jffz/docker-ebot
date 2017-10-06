@@ -24,8 +24,8 @@ while ! nc -z $MYSQL_HOST $MYSQL_PORT; do sleep 3; done
 
 echo 'date.timezone = "${TIMEZONE}"' >> /usr/local/etc/php/conf.d/php.ini
 
-sed -i "s/BOT_IP =.*/BOT_IP = \"$CONTAINER_IP\"/g" $EBOT_HOME/config/config.ini
-#sed -i "s/BOT_IP =.*/BOT_IP = \"$EXTERNAL_IP\"/g" $EBOT_HOME/config/config.ini
+#sed -i "s/BOT_IP =.*/BOT_IP = \"$CONTAINER_IP\"/g" $EBOT_HOME/config/config.ini
+sed -i "s/BOT_IP =.*/BOT_IP = \"$EXTERNAL_IP\"/g" $EBOT_HOME/config/config.ini
 sed -i "s/EXTERNAL_LOG_IP = .*/EXTERNAL_LOG_IP = \"$EXTERNAL_IP\"/g" $EBOT_HOME/config/config.ini
 sed -i "s/MYSQL_IP =.*/MYSQL_IP = \"$MYSQL_HOST\"/g" $EBOT_HOME/config/config.ini
 sed -i "s/MYSQL_PORT =.*/MYSQL_PORT = \"$MYSQL_PORT\"/g" $EBOT_HOME/config/config.ini
