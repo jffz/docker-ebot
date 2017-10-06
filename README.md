@@ -1,6 +1,8 @@
 docker-ebot
 ================
 
+[![](https://images.microbadger.com/badges/image/hsfactory/ebot.svg)](https://microbadger.com/images/hsfactory/ebot "Get your own image badge on microbadger.com")
+
 Dockerised eBot (https://github.com/deStrO/eBot-CSGO) for ease of use. 
 
 Pre-Requisites
