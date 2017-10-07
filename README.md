@@ -2,6 +2,7 @@ docker-ebot
 ================
 
 [![](https://images.microbadger.com/badges/version/hsfactory/ebot.svg)](https://microbadger.com/images/hsfactory/ebot "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/hsfactory/ebot.svg)](https://microbadger.com/images/hsfactory/ebot "Get your own image badge on microbadger.com") 
+
 Dockerised eBot (https://github.com/deStrO/eBot-CSGO) for ease of use. 
 
 Pre-Requisites
@@ -67,10 +68,7 @@ Quick start
 * To admin goto `http://$hostip/admin.php` - u:admin p:password
 
 
-Credits
+Thanks to
 -------
-* jeff
-* carazzim0
 * destr0
-
-
+* carazzim0
