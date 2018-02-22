@@ -57,7 +57,7 @@ ebotweb:
     TOORNAMENT_PLUGIN_KEY: ''
 
 mysql:
-  image: mysql
+  image: mysql:5.7
   restart: always
   volumes:
     - /opt/docker/ebot/mysql:/var/lib/mysql
