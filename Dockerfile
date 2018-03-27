@@ -21,6 +21,7 @@ RUN apt-get update -y && \
     cd "$EBOT_HOME" && git checkout "master" && \
     /usr/local/bin/php /usr/bin/composer.phar install && \
     cp "$EBOT_HOME"/config/config.ini.smp "$EBOT_HOME"/config/config.ini
+    
 WORKDIR ${EBOT_HOME}
 
 COPY entrypoint.sh /sbin/entrypoint.sh
