@@ -3,7 +3,7 @@ FROM php:5.6.25-zts
 ENV EBOT_HOME="/ebot" \
     TIMEZONE="Europe/Paris"
 
-RUN apt-get update -y && apt-get install -y netcat git nodejs npm php5-curl && apt-get clean && \
+RUN apt-get update -y && apt-get install -y netcat nano wget git nodejs npm php5-curl && apt-get clean && \
     mkdir ${EBOT_HOME} && \
     ln -s /usr/bin/nodejs /usr/bin/node && \
     npm install socket.io@0.9.12 archiver@0.4.10 formidable && \
