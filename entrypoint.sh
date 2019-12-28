@@ -19,7 +19,7 @@ USE_DELAY_END_RECORD="${USE_DELAY_END_RECORD:-true}"
 
 TOORNAMENT_PLUGIN_KEY="${TOORNAMENT_PLUGIN_KEY:-azertylol}"
 
-MAPS="${MAPS:-de_dust2,de_mirage}"
+MAPS="${MAPS:-de_dust2_se,de_nuke_se,de_inferno_se,de_mirage_ce,de_train_se,de_cache,de_season,de_dust2,de_nuke,de_inferno,de_train,de_mirage,de_cbble,de_overpass}"
 # Split string by comma into an array
 IFS=',' read -ra map_array <<< "$MAPS"
 
