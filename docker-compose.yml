@@ -1,5 +1,5 @@
 ebot:
-  image: hsfactory/ebot
+  build: https://github.com/jffz/docker-ebot.git
   restart: always
   links:
     - "mysql:mysql"
@@ -29,7 +29,7 @@ ebot:
     TOORNAMENT_PLUGIN_KEY: ''
 
 ebotweb:
-  image: hsfactory/ebotweb
+  build: https://github.com/jffz/docker-ebotweb.git
   restart: always
   links:
     - "mysql:mysql"
